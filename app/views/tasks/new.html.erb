@@ -1,6 +1,6 @@
 <h1>タスク新規作成ページ</h1>
 
-<%= form_for(@message) do |f| %>
+<%= form_for(@task) do |f| %>
 
   
 <%= f.label :content, 'タスク' %>
@@ -15,4 +15,4 @@
 <% end %>
 
 
-<%= link_to '一覧に戻る', messages_path %>
+<%= link_to '一覧に戻る', tasks_path %>
