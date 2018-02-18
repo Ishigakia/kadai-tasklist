@@ -10,9 +10,16 @@
         </button>
         <a class="navbar-brand" href="/">Tasklist</a>
       </div>
+      
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
           <li><%= link_to  '新規タスクの追加', new_task_path %></li>
+           <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+          <% else %>
+           <li><%= link_to 'Signup', signup_path %></li>
+          <li><%= link_to 'Login', login_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>
